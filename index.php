@@ -2,21 +2,26 @@
 
 $greeting =  htmlspecialchars($_GET['id']); 
 
-$names = [
-    'Leo',
-    'Bob',
-    'Mary'   
+$person = [
+    'age'=>31,
+    'hair'=>'brown'
 ];
 
-$counter = 0;
-foreach($names as $name){
-    /*
-    echo $name;
-    if($counter != (count($names)-1))
-        echo ", ";
-    $counter++;
-     */
-    echo "<li>$name</li>";
+/*
+ * prints values
+foreach($person as $feature){
+    echo "<li>$feature</li>";    
 }
+ */
+
+/*
+ * prints keys and values
+foreach($person as $key=>$val){
+    echo "<li><strong>$key</strong> $val</li>";
+}
+ */
+
+unset($person['age']);
+die(var_dump($person));
 
 require 'index.view.php';
