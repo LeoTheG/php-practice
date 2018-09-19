@@ -12,7 +12,7 @@
             <h3>Welcome to the cool club</h3>
             <i style="font-size:3em">&#9773</i>
         <?php else : ?>
-            <h3>You're not that cool, sorry</h3>;
+            <h3>You're not that cool, sorry</h3>
         <?php endif; ?>
     </body>
 </html>
