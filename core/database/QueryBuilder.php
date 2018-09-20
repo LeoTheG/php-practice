@@ -18,7 +18,7 @@ class QueryBuilder{
     public function selectUserByID($id){
         $statement = $this->pdo->prepare("select * from users where id={$id}");
         $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_CLASS);
+        return $statement->fetchAll(PDO::FETCH_OBJ)[0];
     }
 
 }
